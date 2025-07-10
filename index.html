@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperatura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            Conversor de temperatura
+        </nav>
+    </header>
+    <main>
+        <section id="temperaturas">
+            <div>
+                <div>
+                    <input min="0" id="celsius" onchange="celsius(this)" type="number">
+                </div>
+                <div>Celsius</div>
+            </div>
+            <div>
+                <img src="./assets/1368.png" alt="">
+            </div>
+            <div>
+                <div>
+                    <input min="0"  id="kelvin" onchange="kelvin(this)" type="number">
+                </div>
+                <div>Kelvin</div>
+            </div>
+            <div>
+                <img src="./assets/1368.png" alt="">
+            </div>
+            <div>
+                <div>
+                    <input min="0"  id="fahrenheit" onchange="fahrenheit(this)" type="number">
+                </div>
+                <div>Fahrenheit</div>
+            </div>
+        </section>
+        <section>
+            <div style="margin-top: 10px;">
+                <button onclick="convertir()">Convertir</button>
+                <button onclick="borrar()">Borrar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

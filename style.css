@@ -1,0 +1,150 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #ffe0b2);
+    color: #333;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    background: linear-gradient(to right, #2196f3, #ff5722);
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #00000050;
+}
+
+/* Sección de inputs */
+#temperaturas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+#temperaturas>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Inputs */
+input[type="number"] {
+    padding: 10px;
+    width: 120px;
+    font-size: 18px;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    background-color: #ffffffcc;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #ff7043;
+    box-shadow: 0 0 5px #ff704360;
+}
+
+/* Etiquetas */
+#temperaturas>div>div:last-child {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Botones */
+section div {
+    text-align: center;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff7043, #ffcc80);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #f44336, #ffc107);
+    transform: scale(1.05);
+}
+
+/* Imagenes */
+#temperaturas img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #temperaturas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    input[type="number"] {
+        width: 200px;
+    }
+}
+
+/* Responsive: para móviles pequeños */
+@media (max-width: 600px) {
+    #temperaturas {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Ajusta el tamaño de las imágenes para que no sean tan grandes */
+    #temperaturas img {
+        width: 30px;
+        height: 30px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 320px;
+        margin: 10px 0;
+    }
+}
+
+/* Responsive: para tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    #temperaturas {
+        gap: 25px;
+    }
+
+    input[type="number"] {
+        width: 140px;
+    }
+
+    #temperaturas img {
+        width: 35px;
+        height: 35px;
+    }
+}
